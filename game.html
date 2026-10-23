@@ -2,59 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js" defer></script>
-
+    <title>Three Names, One Secret</title>
 </head>
+
 <body>
     <header>
-      <nav>
-            <ul> 
-                <li><a href="index.html">Home</a></li>
-            </ul>
-            <ul> 
-                <li><a href="game.html">Play the game</a></li>
-            </ul>
-            <ul> 
-                <li><a href="about.html">About the creator</a></li>
-            </ul>
+        <h1>Three Names, One Secret</h1>
+
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About the Creator</a>
         </nav>
+
+        <p>A mystery game where every decision matters.</p>
     </header>
 
     <main>
-    <header>
-        <h1 id="scene-title">  </h1>
-        <h2 id="character-name">  </h2>
-    </header>
-    
-    <section>
-    <p id="scene-text">     </p>
+        <section>
+            <h2 id="scene-title">Your Apartment</h2>
 
-    </section>
+            <p id="character-name">Identity: Your real self</p>
 
-    <section>
-        <div id="choices-container"> </div>
-    </section>   
-        
-    <section>
-        <p> Current HP:</p>
-        <ul>
-            <li id="health-display"> 100</li>
-        </ul>
+            <p id="scene-text">
+                Three people have died. You know the deaths are
+                connected, but the police do not know who is responsible.
+            </p>
 
-        <p> Inventory:</p>
-        <ul>
-            <li id="inventory-display"> </li>
-        </ul>
+            <figure>
+                <img id="scene-image"
+                     src="images/apartment.jpg"
+                     alt="The current location in the mystery"
+                     width="400">
 
-        <p id="message-display"></p>
-    </section>
+                <figcaption id="image-caption">
+                    Three deaths. Three identities. One secret.
+                </figcaption>
+            </figure>
+        </section>
 
+        <section>
+            <h2>Your Choices</h2>
 
+            <div id="choices-container">
+                <!-- JavaScript creates the choice buttons here. -->
+            </div>
+
+            <p id="message-display">
+                Your investigation begins now.
+            </p>
+        </section>
+
+        <section>
+            <h2>Current Status</h2>
+
+            <p>
+                Suspicion:
+                <strong id="suspicion-display">0</strong>
+            </p>
+
+            <p>
+                The higher your suspicion, the greater your chance
+                of being identified.
+            </p>
+        </section>
+
+        <section>
+            <h2>Inventory: Collected Clues</h2>
+
+            <ul id="inventory-display">
+                <li>No clues collected</li>
+            </ul>
+        </section>
     </main>
-    <footer>
 
+    <footer>
+        <p>Three Names, One Secret | Fictional mystery game</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
