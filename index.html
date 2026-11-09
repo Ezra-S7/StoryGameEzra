@@ -2,69 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A Reverse Murder Mystery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystery.css">
 </head>
 <body>
-    <p><a href="about.html">About the creator</a></p>
+    <header>
+        <p><a href="about.html">About the creator</a></p>
 
-    <h1>A Reverse Murder Mystery</h1>
+        <h1>A Reverse Murder Mystery</h1>
 
-    <p>Three people from different parts of the city have died. The police think the deaths may be connected, but the victims seem to have nothing in common.</p>
+        <p>Three people from different parts of the city have died. The police think the deaths may be connected, but the victims seem to have nothing in common.</p>
 
-    <p>But you know the truth, the deaths are connected, and you are the person behind the three identities the police are investigating. Your goal is to learn what the investigators know without letting them connect the murders and identities to you.</p>
+        <p>But you know the truth, the deaths are connected, and you are the person behind the three identities the police are investigating. Your goal is to learn what the investigators know without letting them connect the murders and identities to you.</p>
 
 
-    <p><em>Three identities. Three investigations.</em></p>
+        <p style="color: #eaf3fb;"><em>Three identities. Three investigations.</em></p>
+    </header>
 
-    <h3>Places You Can Visit</h3>
-    <ul>
-        <li>Your apartment</li>
-        <li>The police station</li>
-        <li>A hotel</li>
-        <li>A business office</li>
-        <li>The first victim's apartment</li>
-        <li>A university</li>
-    </ul>
+    <main>
+        <h3>Places You Can Visit</h3>
+        <ul>
+            <li>Your apartment</li>
+            <li>The police station</li>
+            <li>A hotel</li>
+            <li>A business office</li>
+            <li>The first victim's apartment</li>
+            <li>A university</li>
+        </ul>
 
-    <p>Your choices affect how much you learn, how suspicious the investigators become, and whether your identities are connected.</p>
+        <p>Your choices affect how much you learn, how suspicious the investigators become, and whether your identities are connected.</p>
 
-    <!-- This form sends the player's choices to game.html. -->
-    <h2>Before You Begin</h2>
+        <!-- This form sends the player's choices to game.html. -->
+        <h2>Before You Begin</h2>
 
-    <form action="game.html" method="get">
-        <p>
-            <label for="playerName">What name should the game use for you?</label><br>
-            <input type="text" id="playerName" name="playerName" placeholder="Enter a player name" required>
-        </p>
+        <form action="game.html" method="get">
+            <p>
+                <label for="playerName">What name should the game use for you?</label><br>
+                <input type="text" id="playerName" name="playerName" placeholder="Enter a player name" required>
+            </p>
 
-        <p>
-            <label for="persona">Which identity will you use first?</label><br>
-            <select id="persona" name="persona" required>
-                <option value="">Choose an identity</option>
-                <option value="pablo">Pablo Hernandez</option>
-                <option value="ezaak">Ezaak Butler</option>
-                <option value="frederick">Frederick McLovin</option>
-            </select>
-        </p>
+            <p>
+                <label for="persona">Which identity will you use first?</label><br>
+                <select id="persona" name="persona" required>
+                    <option value="">Choose an identity</option>
+                    <option value="pablo">Pablo Hernandez</option>
+                    <option value="ezaak">Ezaak Butler</option>
+                    <option value="frederick">Frederick McLovin</option>
+                </select>
+            </p>
 
-        <p>Choose your Starting Location:</p>
+            <p>Choose your Starting Location:</p>
 
-        <input type="radio" id="apartment" name="location" value="apartment" required>
-        <label for="apartment">Your Apartment</label><br>
+            <input type="radio" id="apartment" name="location" value="apartment" required>
+            <label for="apartment">Your Apartment</label><br>
 
-        <input type="radio" id="police" name="location" value="police">
-        <label for="police">Police Station</label><br>
+            <input type="radio" id="police" name="location" value="police">
+            <label for="police">Police Station</label><br>
 
-        <input type="radio" id="hotel" name="location" value="hotel">
-        <label for="hotel">Hotel</label><br>
+            <input type="radio" id="hotel" name="location" value="hotel">
+            <label for="hotel">Hotel</label><br>
 
-        <p>
-            <label for="risk">How much risk are you willing to take? (1 to 5)</label><br>
-            <input type="number" id="risk" name="risk" min="1" max="5" value="3" required>
-        </p>
+            <p>
+                <label for="risk">How much risk are you willing to take? (1 to 5)</label><br>
+                <input type="number" id="risk" name="risk" min="1" max="5" value="3" required>
+            </p>
 
-        <input type="submit" value="Begin the Story">
-    </form>
+            <input type="submit" value="Begin the Story">
+        </form>
 
+    </main>
 </body>
 </html>

@@ -2,7 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Three Names, One Secret</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystery.css">
+    <style>
+        #suspicion-display {
+            color: #17324d;
+            font-size: 1.4rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,25 +38,12 @@
                 Three people have died. You know the deaths are
                 connected, but the police do not know who is responsible.
             </p>
-
-            <figure>
-                <img id="scene-image"
-                     src="images/apartment.jpg"
-                     alt="The current location in the mystery"
-                     width="400">
-
-                <figcaption id="image-caption">
-                    Three deaths. Three identities. One secret.
-                </figcaption>
-            </figure>
         </section>
 
         <section>
             <h2>Your Choices</h2>
 
-            <div id="choices-container">
-                <!-- JavaScript creates the choice buttons here. -->
-            </div>
+            <div id="choices-container"></div>
 
             <p id="message-display">
                 Your investigation begins now.
@@ -74,11 +72,6 @@
             </ul>
         </section>
     </main>
-
-    <footer>
-        <p>Three Names, One Secret | Fictional mystery game</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

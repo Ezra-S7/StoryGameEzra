@@ -17,8 +17,6 @@ const scenes = {
         title: "Location: Your Apartment",
         character: "Identity: Your real self",
         text: "Over the past month, three people have died: a businessman, a politician, and a university professor. The police have not announced a connection, but you know the deaths are connected because you planned all three. You created three identities: Pablo Hernandez, Ezaak Butler, and Frederick McLovin. Your goal is to discover what investigators know without revealing that the identities belong to the same person.",
-        image: "images/apartment.jpg",
-        caption: "Your apartment is the only place where you can be yourself.",
         choices: [
             {
                 text: "Watch the news and visit the police station",
@@ -50,7 +48,6 @@ const scenes = {
         title: "Location: Police Station",
         character: "Interviewee: Detective",
         text: "Investigators are comparing the three deaths. You want to learn what they know, but asking too many questions could attract attention.",
-        image: "images/police.jpg",
         caption: "Investigators are beginning to look for a connection.",
         choices: [
             {
@@ -91,7 +88,6 @@ const scenes = {
         title: "Location: The Hotel",
         character: "Interviewee: Receptionist",
         text: "One of the victims was found at this hotel. You stayed here under the name Ezaak Butler. The receptionist may remember who visited around the time of the death.",
-        image: "images/hotel.jpg",
         caption: "The hotel holds information about one of the victims.",
         choices: [
             {
@@ -124,7 +120,6 @@ const scenes = {
         title: "Location: Business Office",
         character: "Interviewee: Company Employee",
         text: "The businessman worked with several companies. You previously visited this office as Pablo Hernandez, claiming to be a financial consultant. An employee remembers Pablo and the meeting with the victim.",
-        image: "images/office.jpg",
         caption: "The businessman's professional life may hold important clues.",
         choices: [
             {
@@ -161,7 +156,6 @@ const scenes = {
         title: "Location: The First Victim's Building",
         character: "Interviewee: Building Resident",
         text: "The businessman's apartment building has already been searched. A resident remembers that police asked about the victim's recent meetings. Returning to the area could attract unwanted attention.",
-        image: "images/crime.jpg",
         caption: "The first death may connect the other cases.",
         choices: [
             {
@@ -194,7 +188,6 @@ const scenes = {
         title: "Location: The University",
         character: "Interviewee: Professor's Colleague",
         text: "The third victim was a university professor. You met him as Frederick McLovin. His colleague says the professor had recently become worried about someone he knew. The professor also kept a diary of appointments.",
-        image: "images/university.jpg",
         caption: "The professor's records may reveal a connection.",
         choices: [
             {
@@ -236,7 +229,6 @@ const scenes = {
         title: "The Investigation Reaches Its Conclusion",
         character: "Case status: Final review",
         text: "The investigators are reaching their conclusions. Your suspicion level and the clues you collected will determine the outcome.",
-        image: "images/city.jpg",
         caption: "The investigation is almost over.",
         choices: [
             {
@@ -259,9 +251,8 @@ const scenes = {
     caught: {
         title: "Ending 3: You Are Caught",
         character: "Case status: Solved",
-        text: "Investigators compare witness statements and records. Too many details point toward the same person. They connect Pablo Hernandez, Ezaak Butler, and Frederick McLovin to you and identify you as the person responsible for all three murders. Your attempt to keep the identities separate has failed.",
-        image: "images/city.jpg",
-        caption: "The investigation has reached you.",
+        text: "Investigators compare witness statements and records. They connect Pablo Hernandez, Ezaak Butler, and Frederick McLovin to you and identify you as the person responsible for all three murders. Your attempt to keep the identities separate has failed.",
+        caption: "The investigation has caught you.",
         choices: [
             {
                 text: "Play again",
@@ -275,8 +266,7 @@ const scenes = {
     identities: {
         title: "Ending 2: The Identities Are Connected",
         character: "Case status: Partially solved",
-        text: "Investigators discover links between Pablo Hernandez, Ezaak Butler, and Frederick McLovin. They believe the three deaths are connected, but they cannot establish who the real person behind the identities is. You escape identification, but all three personas are compromised.",
-        image: "images/city.jpg",
+        text: "Investigators discover links between Pablo Hernandez, Ezaak Butler, and Frederick McLovin. They believe the three deaths are connected, but they cannot find who the real person behind the identities is. You escape identification, but all three personas are compromised.",
         caption: "The identities are no longer separate.",
         choices: [
             {
@@ -292,7 +282,6 @@ const scenes = {
         title: "Ending 1: The Identities Remain Separate",
         character: "Case status: Unsolved",
         text: "The police continue investigating, but they cannot establish a convincing connection between the three identities. Without enough evidence to connect the cases to one person, the investigation loses momentum. You have avoided identification, at least for now.",
-        image: "images/city.jpg",
         caption: "For now, the secret remains hidden.",
         choices: [
             {
@@ -313,8 +302,6 @@ const sceneTitle = document.getElementById("scene-title");
 const sceneText = document.getElementById("scene-text");
 const choicesContainer = document.getElementById("choices-container");
 const characterName = document.getElementById("character-name");
-const sceneImage = document.getElementById("scene-image");
-const imageCaption = document.getElementById("image-caption");
 
 const suspicionDisplay = document.getElementById("suspicion-display");
 const inventoryDisplay = document.getElementById("inventory-display");
@@ -332,11 +319,6 @@ function updateScene(sceneName) {
     sceneTitle.textContent = scene.title;
     sceneText.textContent = scene.text;
     characterName.textContent = scene.character;
-
-    // Update the image and its caption for this location.
-    sceneImage.src = scene.image;
-    sceneImage.alt = scene.title;
-    imageCaption.textContent = scene.caption;
 
     // Remove the old buttons.
     choicesContainer.innerHTML = "";
