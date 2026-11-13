@@ -1,8 +1,3 @@
-/*
-Three Names, One Secret
-A mystery game about three connected murders.
-*/
-
 // --------------------------------------------------
 // SCENES
 // --------------------------------------------------
